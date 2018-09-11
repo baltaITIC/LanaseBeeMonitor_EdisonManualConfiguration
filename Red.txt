@@ -1,0 +1,12 @@
+Conectarse a una red
+
+edison_configure --wifi
+(Seguir los pasos que indica el programa y esperar a que confirme de conectado)
+systemctl disable connman
+reboot
+
+O bien 
+Copiar wpa_supplicant en /etc/wpa_supplicant/wpa_supplicant.conf //Hacer respaldo del viejo
+Disable connman
+Reboot
+

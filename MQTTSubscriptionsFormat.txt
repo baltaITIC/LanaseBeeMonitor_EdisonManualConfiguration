@@ -1,0 +1,17 @@
+Documentation Contents
+	/id_site_#/sensor	-------> Normal Observation Publication
+		String format: id_agent id_sensor value date time
+			Date Format: YYYY-MM-DD
+			Time Format: HH:mm:ss
+		Example: /id_site_1/light 1 1 10 2018-01-18 15:05:00
+	/id_site_#/sensor	-------> Alert publication
+		String format: id_agent id_sensor value date time priority state
+			Date Format: YYYY-MM-DD
+			Time Format: HH:mm:ss
+			Priority: high/low
+			State: 0/1
+		Example: /id_site_1/weight 1 6 15.7 2018-01-18 15:05:00 high 1
+	/id_site_#/rfid
+		String format: date time id_rfid id_bee
+			Same date and time format
+		Example: 2018-01-18 15:05:00 2 FFFFFFFFFFFFFFF

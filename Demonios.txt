@@ -1,0 +1,6 @@
+Unit		|File Ubication							|Notes
+----------------|---------------------------------------------------------------|------------------
+sensorMQTT	|/home/root/ScriptFuncionales/sensor_database_mqtt_sending4.py  |Lectures from sensors, determine alerts, calls method for insert observations and alerts and calls publisher method.
+pyru824		|/home/root/pyru824.py						|Lectures from rfid chips on bees, and lectures' publications to server
+postgres	|/opt/PostgreSQL-9.1/bin/-					|Edison BD server
+msgSSH		|/home/root/ScriptFuncionales/messageSock.py			|Activate reverse SSH tunnel from prototype to server

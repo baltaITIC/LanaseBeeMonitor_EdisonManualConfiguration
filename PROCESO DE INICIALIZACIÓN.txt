@@ -1,0 +1,14 @@
+Flashear edison
+Conectarse a ua red permanentemente (Red.txt)
+Instalar postgres (postgresInstall.txt)
+importar la base de datos
+Inicializar la base de datos (InicializarBaseDeDatos(COMPLETO).txt)
+Configurar python (Configuración de python.txt)
+Importar las librerías (Ir a LibreriasSeleccionadasParaSensores/README)
+Copiar ScriptFuncional y RFID
+Copiar contenido de la carpeta "Demonios" en /lib/systemd/system/
+Cambiar permisos SystemStarting chmod 777 SystemStarting
+Cambiar zona horaria por chicago timedatectl set-timezone America/Chicago
+	(Si no cambia: systemctl set-local-rtc 1)
+systemctl start LanaseBeeMonitor (Debe funcionar si todo se hizo correctamente)
+

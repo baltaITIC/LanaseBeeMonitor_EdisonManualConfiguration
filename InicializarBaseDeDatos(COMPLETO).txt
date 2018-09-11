@@ -1,0 +1,22 @@
+//Este trabajo puede omitirse ya que el demonio 'inicial' inicializa la base de datos 
+//Con información real
+(Para posteriores agentes)
+Anadir ubicación
+Añadir site
+
+------Update a agente---------
+DELETE  FROM alert;
+DELETE  FROM observation;
+DELETE  FROM bees;
+DELETE  FROM sensor;
+DELETE  FROM bee_control;
+DELETE  FROM sensor_rfid;
+UPDATE agent SET pk_id_agent = 4 WHERE pk_id_agent=1;
+
+------Alta de los sensores principales-------
+INSERT INTO sensor (pk_id_sensor, sensor_state, installation_date, descryption, port, min_value, max_value, fk_id_sensor_type, fk_id_agent) VALUES (37, TRUE,'2018-05-17','Sensor de luz','A0',0,15000,1,4);
+INSERT INTO sensor (pk_id_sensor, sensor_state, installation_date, descryption, port, min_value, max_value, fk_id_sensor_type, fk_id_agent) VALUES (38, TRUE,'2018-05-17','Sensor de sonido','A1',0.0000001,20,2,4);
+INSERT INTO sensor (pk_id_sensor, sensor_state, installation_date, descryption, port, min_value, max_value, fk_id_sensor_type, fk_id_agent) VALUES (39, TRUE,'2018-05-17','Sensor de vibracion','A3',19,800,3,4);
+INSERT INTO sensor (pk_id_sensor, sensor_state, installation_date, descryption, port, min_value, max_value, fk_id_sensor_type, fk_id_agent) VALUES (40, TRUE,'2018-05-17','Sensor de aceleración','I2C (Registro x74)',0,0,4,4);
+INSERT INTO sensor (pk_id_sensor, sensor_state, installation_date, descryption, port, min_value, max_value, fk_id_sensor_type, fk_id_agent) VALUES (42, TRUE,'2018-05-17','Sensor de temperatura externa','A2',6,50,6,4);
+INSERT INTO sensor (pk_id_sensor, sensor_state, installation_date, descryption, port, min_value, max_value, fk_id_sensor_type, fk_id_agent) VALUES (43, TRUE,'2018-05-17','Sensor de peso','UART',0,300,7,4);

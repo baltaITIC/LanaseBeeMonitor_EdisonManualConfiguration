@@ -1,0 +1,35 @@
+PostgreSQL installation steps on INTEL EDISON
+
+wget ftp.postgresql.org/pub/source/v9.3.2/postgresql-9.3.2.tar.bz2
+tar jxf postgresql-9.3.2.tar.bz2  //Uncompresing sources
+cd postgresql-9.3.2/
+mkdir /opt/PostgreSQL-9
+
+./configure --prefix=/opt/PostgreSQL-9  //Create the folder first
+
+make (if error make clean)
+
+make install
+
+useradd postgres
+
+change permissions recursively, make postgres owner of postgres installation folder
+
+chown -R postgres:postgres /opt/PostgreSQL-9/
+cd /opt/PostgreSQL-9/bin/
+initdb -D /folder/for/dbs
+./initdb -D ../share/dbs/
+
+//Copiar base de datos en bin
+
+./postgres -D ../share/dbs //Start postgres o iniciar el demonio si ya c copio el archivo
+
+./createdb iot-sensors
+
+./psql iot-sensors < DB_a_llenar.sql //Restoring DB. Ready to start the scripts
+
+Copiar el demonio en /lib/systemd/system/
+systemctl start postgres
+systemctl status postgres
+
+

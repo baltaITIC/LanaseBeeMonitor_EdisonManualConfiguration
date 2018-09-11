@@ -1,0 +1,7 @@
+INSERT INTO sensor(pk_id_sensor, sensor_state, installation_date, descryption, port, min_value, max_value, fk_id_sensor_type, fk_id_agent)
+VALUES (8,TRUE,'2018-02-14','Sensor de luz en la UNAM Prot 2', 'A0', 10, 10000,1,2),
+(9,TRUE,'2018-02-14','Sensor de Sonido en la ENES Prot 2', 'A1', 0, 100,2,2),
+(10,TRUE,'2018-02-14','Sensor de vibración en la ENES Prot 2', 'A3', 0, 800,3,2),
+(11,TRUE,'2018-02-14','Sensor de aceleración en la ENES Prot 2', 'I2C (Registro x74', 0, 0,4,2),
+(12,TRUE,'2018-02-14','Sensor de Temperatura Externa en la ENES Prot 2', 'A2', 0, 50,6,2),
+(13,TRUE,'2018-02-14','Sensor de peso en la UNAM Prot 2 (Alemana)', 'UART', 0, 300,7,2);
